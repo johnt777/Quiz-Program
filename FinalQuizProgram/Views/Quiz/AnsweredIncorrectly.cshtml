@@ -1,0 +1,18 @@
+﻿@model QuizLibrary.Entity.Student
+@{
+    ViewBag.Title = "AnsweredIncorrectly";
+}
+
+<h2>@Model.FirstName - @Model.LastName </h2>
+<p>
+    <span class="label label-default">Correct</span>
+    <span class="label label-info">@Model.Correct</span>
+</p>
+<p>
+    <span class="label label-default">Attempts</span>
+    <span class="label label-info">@Model.Attempts</span>
+</p>
+<a href="@Url.Action("Index", "Quiz")" class="btn btn-success btn-lg">
+    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+    Continue
+</a>

@@ -1,0 +1,20 @@
+﻿@using WebMatrix.Data
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@{
+    var db = Database.Open("QuizDbContext");
+    var data = db.Query("SELECT Correct, LastName, Attempts FROM Student");
+    var myChart = new Chart(width: 1200, height: 600, theme: ChartTheme.Blue)
+        .AddTitle("Most Correct Answers")
+        .SetYAxis("Number of Correct Answers")
+        .AddSeries("default",
+         xValue: data, xField: "Lastname",
+         yValues: data, yFields: "Correct")
+        .Write("png");
+}
+
+

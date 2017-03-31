@@ -1,0 +1,32 @@
+{
+  "siteName": {
+    "value": "FinalQuizProgramJT"
+  },
+  "hostingPlanName": {
+    "value": "CIDM3312SP"
+  },
+  "siteLocation": {
+    "value": "South Central US"
+  },
+  "sku": {
+    "value": "Shared"
+  },
+  "workerSize": {
+    "value": "0"
+  },
+  "serverName": {
+    "value": "cidmjt3312"
+  },
+  "serverLocation": {
+    "value": "South Central US"
+  },
+  "administratorLogin": {
+    "value": "jthompson"
+  },
+  "administratorLoginPassword": {
+    "value": "Basball_777"
+  },
+  "databaseName": {
+    "value": "FinalQuizProgramJT_db"
+  }
+}

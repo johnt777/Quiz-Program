@@ -1,0 +1,22 @@
+﻿@using WebMatrix.Data
+@{
+    ViewBag.Title = "Chart2";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Chart2</h2>
+
+
+@{
+    var db1 = Database.Open("QuizDbContext");
+    var data1 = db1.Query("SELECT Likes, Id FROM Question");
+    var myChart1 = new Chart(width: 1200, height: 600, theme: ChartTheme.Green)
+        .AddTitle("Question Comparison")
+        .SetYAxis("Likes")
+        .AddLegend("Question Id")
+        .AddSeries(chartType: "pie",
+         xValue: data1, xField: "Id",
+         yValues: data1, yFields: "Likes")
+        .Write("png");
+
+}
